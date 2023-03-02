@@ -16,7 +16,7 @@ export class ApiComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get('/api').subscribe(res => {
+    this.http.get('/api/test').subscribe(res => {
       console.log('res', res)
       this.response = JSON.stringify(res)
     })

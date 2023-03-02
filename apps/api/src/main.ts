@@ -10,7 +10,7 @@ const app = express();
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
-app.get('/', (req, res) => {
+app.get('/test', (req, res) => {
   res.send({ message: 'Welcome to api!' });
 });
 

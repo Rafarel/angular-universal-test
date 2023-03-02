@@ -104,7 +104,7 @@
       "executor": "@angular-devkit/build-angular:server",
       "options": {
         "outputPath": "dist/my-app/server",
-        "main": "apps/my-app/src/main.server.ts",
+        "main": "apps/my-app/src/server.ts",
         "tsConfig": "apps/my-app/tsconfig.server.json"
       },
       "configurations": {
@@ -119,6 +119,20 @@
         }
       },
       "defaultConfiguration": "production"
+    },
+    "serve-ssr": {
+      "executor": "@nguniversal/builders:ssr-dev-server",
+      "configurations": {
+        "development": {
+          "browserTarget": "my-app:build:development",
+          "serverTarget": "my-app:server:development"
+        },
+        "production": {
+          "browserTarget": "my-app:build:production",
+          "serverTarget": "my-app:server:production"
+        }
+      },
+      "defaultConfiguration": "development"
     }
   },
   "tags": []

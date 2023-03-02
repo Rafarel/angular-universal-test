@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
+import { ApiComponent } from './components/api/api.component';
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
+  declarations: [AppComponent, NxWelcomeComponent, ApiComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
